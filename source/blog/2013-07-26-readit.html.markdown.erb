@@ -1,0 +1,53 @@
+---
+title: Readit
+date: 2013-07-26
+tags: 
+- Rails
+- MakerSquare
+---
+
+These past couple of weeks, in the limited free time that I have while doing this course, I have been building a reddit clone.  Way back in the beginning of the course, when we were learning about the basics of rails routes, we created a barebones blog app, which the class called Readit.READMORE
+
+![Readit1](<%= current_page.url %>readit1.png)
+
+The class discarded the app once it had served its purpose, however, I was curious to see how closely I could get it to look and function like reddit, with links, comments, users, and a voting system.
+
+When we created the initial app, we were also introduced to Devise, an engine that handles user authentication, allowing users to register for the app, maintaining the user’s session, and then log in and log out securely.  Devise also uses BCrypt to encrypt and store the users passwords.
+
+As an engine, Devise comes with a number of pre-made views for user registration and log-in.  By default, these views live in the gem and are not editable.  The first thing that I did was to import the devise views into my app using **rails generate devise:views**.
+
+This allowed me to use bootstrap to improve the look of the log-in and registration forms.
+
+![Readit2](<%= current_page.url %>readit2.png)
+
+We had also been introduced to **will_paginate**, a gem that makes paginating through Active Record queries quick and easy.  While extremely helpful, the gem does not play well with Bootstrap, and I initially had some difficulty with trying to style it.   I discovered a companion gem called *will_paginate_bootstrap**, that restyles will_paginate to work with Bootstrap.
+
+![Readit3](<%= current_page.url %>readit3.png)
+
+A key part of Reddit functionality is the ability to upvote and downvote links and comments.  Rather than try to create this myself, I found a gem called **thumbs_up**, which can turn Active Record models into objects that can be voted upon, and turns your users into voters, tracking their votes in a “votes” table in your database.  By linking to a “vote_up” or “vote_down” path, and passing in the object as a parameter, users can assign an upvote or downvote, which can be displayed separately or as a single number, the sum of upvotes minus the sum of downvotes.  Thumbs_up allows you the option of limiting each user to 1 vote on each object, which prevents users from spamming their own posts and comments with upvotes, and downvoting others into oblivion.  I set my index view so that the links with the highest number of votes would display first, and set the show view to do the same thing with the highest voted comments.
+
+![Readit4](<%= current_page.url %>readit4.png)
+
+One of my goals with this app was for users to submit a link to a site, and other users would be able to see a preview picture of that site, before they decided to click on the link.  This was easier said than done.  Aside from having users upload their own images of the site, my options were very limited.  However, I managed to find a service called [Webthumb](http://webthumb.bluga.net/home), which provides a web service API for generating web thumbnails and full-size snapshots of websites.  The API was very well documented, and even provided a Ruby wrapper, which, while being very old and no longer maintained, still provides full functionality.
+
+When I first implemented the API, I found that it worked great.  Provided that the user fed it a valid URL, the service would crawl to the site, and create several snapshots of varying sizes, which I could access in my views.  However, I began noticing that after a period of 24 hours, my images began disappearing from the app, being replaced by that dreaded “broken image” icon.  
+
+![Readit5](<%= current_page.url %>readit5.png)
+
+This was a problem for two reasons:
+
+First of all, obtaining the images was a relatively slow process.  When a user creates a post, it take the API anywhere between 1 and 2 seconds to crawl to the site and obtain an image.  This isn’t an issue if you’re only looking for one image, but if you’re on the index page and need to re-obtain all 20 thumbnails, that’s going to take a long time.  While I could theoretically use AJAX to do it asynchronously, allowing the user to continue browsing site while the images load, this would be an ugly fix.
+
+The second problem was that my free Webthumb account only allows me 100 credits each month.  Each call to the service costs one credit.  Once I reach 100 calls to the server, I can’t use the service until the start of the next month.
+
+I am still working on a fix to this problem.  My thought is that I should be able to use the service, and then write the images that it creates to an Amazon S3 server.  The images and the links they’re associated with could be stored there permanently.  After the images have been written to the S3 server, I should be able to access them directly, without needing to use the API.  Hopefully I will have some free time this weekend to test out this method.  
+
+For now, this is my front-page, complete with broken-linked images to Google.
+
+![Readit6](<%= current_page.url %>readit6.png)
+
+Each link is tied to the user who added it, and displays their personal gravatar image if they have one, as well as the local time they added the link.  My eventual goal is to turn the username into a link to the user’s profile page, displaying their email, github account, twitter, etc.
+
+Ideally I will have this completed by the end of next week.  My goal is to use this app within MakerSquare, to allow students to share coding blogs and other sites that they find useful throughout the course.  Since this first cohort is almost done with our training, it probably won’t have much use for them, but hopefully later cohorts will find it helpful.
+
+

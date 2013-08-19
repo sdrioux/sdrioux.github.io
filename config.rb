@@ -19,9 +19,9 @@ activate :sprockets
 ## Site-wide settings
 ####
 
-set :full_name, "Ada Lovelace"
-set :city, "London, England"
-set :resume, nil # Set to filename of resume PDF in source directory.
+set :full_name, "Silas Rioux"
+set :city, "Austin, TX"
+set :resume, "resume.pdf" # Set to filename of resume PDF in source directory.
 set :google_analytics_tracking_id, "UA-111111111-11"
 
 ###
@@ -31,15 +31,15 @@ set :google_analytics_tracking_id, "UA-111111111-11"
 # To hide one of these profile links, just set it to nil.
 
 # This is the id for your profile URL: https://plus.google.com/https://plus.google.com/110506932842622114536/
-set :google_plus_user_id, "110506932842622114536"
+set :google_plus_user_id, nil
 # This is your shortname for your profile URL: http://facebook.com/ada.lovelace
-set :facebook_profile_name, "ada.lovelace"
-set :twitter_username, "ada"
+set :facebook_profile_name, "silas.rioux5"
+set :twitter_username, "silasrioux"
 # This is your shortname for your profile URL: http://linkedin.com/in/adalovelace
-set :linkedin_profile_name, "adalovelace"
-set :dribbble_username, "adalovelace"
-set :github_username, "ada"
-set :gravatar_email_address, "me@adalovelace.com"
+set :linkedin_profile_name, "silasrioux"
+set :dribbble_username, nil
+set :github_username, "sdrioux"
+set :gravatar_email_address, "silas.rioux@gmail.com"
 
 Time.zone = "America/Chicago"
 
@@ -48,7 +48,7 @@ Time.zone = "America/Chicago"
 ## Blog settings
 ###
 
-set :disqus_shortname, "adas-blog"
+set :disqus_shortname, "silasrioux"
 
 activate :blog do |blog|
   blog.prefix = "/blog"
@@ -133,7 +133,7 @@ helpers do
   #
   # Returns the String markup.
   def social_network_link(network_name, network_setting, url)
-    if facebook_profile_name
+    if network_setting
       <<-MARKUP
         <li>
           <a href='#{url}'>
@@ -157,6 +157,8 @@ activate :syntax
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
+
+activate :directory_indexes
 
 # Build-specific configuration
 configure :build do

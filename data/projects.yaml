@@ -1,17 +1,22 @@
 - 
-  name: MakerSquare
-  url: http://themakersquare.com
-  screenshot: makersquare-screenshot.png
+  name: NoobNoos
+  url: http://n00bn00s.herokuapp.com
+  source_link: http://github.com/sdrioux/noobnoos.git
+  screenshot: noobnoos-screenshot.png
   featured: true
   description: |
-                 MakerSquare is a full-time, ten week program that turns you into a web developer.
+                 Individual project for MakerSquare.  Web app designed to be a repository of coding resources for users at MakerSquare, and other similar programs. After registering and signing in to the app, each user will be able to post links to their favorite coding websites, so that other students can then browse the site and find new resources. This app uses a gem called thumbs_up to create a voting structure, where users can give an up or down vote to each link. The links that compile the most upvotes will sort to the front page. Users can also comment on each link, and the comments may also be voted upon.
+
+                 The app uses an API for Webthumb, a service that, when a user first creates a link, will crawl to that site, and provide the app with a picture of the landing page. The server then stores the picture on my Amazon S3 server, and associates the link with a thumbnail of that picture.
+
+                 Users that are not logged in to the site will be able to view links that other users have posted, however, will not be able to add links of their own, or vote on other links until they are logged in.
+
+                 Solr search functionality has been added, and allows users to search for links based on the title of each link, using a WebSolr Sunspot 1.3 server on Amazon EC2.
 - 
-  name: RailsGirls ATX
-  url: http://railsgirlsatx.org
-  source_link: http://github.com/railsgirlsatx/site
-  screenshot: railsgirls-screenshot.png
+  name: Blocktalk
+  url: http://blocktalk.io
+  source_link: http://github.com/a17levine/blocktalk.git
+  screenshot: blocktalk-screenshot.png
   featured: false
   description: |
-                 This is a very long description.
-
-                 It has multiple paragraphs.    
+                 Group project for MakerSquare. JQuery intensive web app, designed to allow two individuals to schedule a time to meet. Uses JQuery UI, as well as Moment.js to allow the first user to select available times, then send the resulting link to the second user, allowing them to select the final time. A mailer then sends an email to both participants, with an iCalendar invite.
