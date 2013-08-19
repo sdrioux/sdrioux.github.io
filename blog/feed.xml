@@ -64,4 +64,115 @@
 &lt;p&gt;Ideally I will have this completed by the end of next week.  My goal is to use this app within MakerSquare, to allow students to share coding blogs and other sites that they find useful throughout the course.  Since this first cohort is almost done with our training, it probably won’t have much use for them, but hopefully later cohorts will find it helpful.&lt;/p&gt;
 </content>
   </entry>
+  <entry>
+    <title>My First Fully Functional Web App</title>
+    <link rel="alternate" href="/blog/2013/07/06/my-first-fully-functional-web-app/"/>
+    <id>/blog/2013/07/06/my-first-fully-functional-web-app/</id>
+    <published>2013-07-06T05:00:00Z</published>
+    <updated>2013-07-06T05:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <summary type="html">&lt;p&gt;I made my first real web app last week.   The goal was to create a Blog site, where you could create, read, update, and destroy (&lt;strong&gt;CRUD&lt;/strong&gt;) individual blog posts.  As our first real foray into fully functional web apps, the back-end was designed to be simple...&lt;/p&gt;</summary>
+    <content type="html">&lt;p&gt;I made my first real web app last week.   The goal was to create a Blog site, where you could create, read, update, and destroy (&lt;strong&gt;CRUD&lt;/strong&gt;) individual blog posts.  As our first real foray into fully functional web apps, the back-end was designed to be simple, with only one Post model, but even so, initially it was a struggle to wrap our heads around how HTTP methods (&lt;strong&gt;GET&lt;/strong&gt;, &lt;strong&gt;PUT&lt;/strong&gt;, &lt;strong&gt;POST&lt;/strong&gt;, &lt;strong&gt;DELETE&lt;/strong&gt;, etc.) worked, and how the router worked together with the methods, controller, and views (&lt;strong&gt;MVC&lt;/strong&gt;) to deliver the data.&lt;/p&gt;
+
+&lt;p&gt;After class was over on Wednesday night, I made my way to Capitol Factory for their Open Hack, where I met up with my mentor, Austin Hughey.  Austin works for Engine Yard and has probably forgotten more about Ruby on Rails than I will ever know.  I had mentioned to him that I was looking for a side project to work on outside of class, and he recommended getting myself familiar with test-driven development (&lt;strong&gt;TDD&lt;/strong&gt;).  &lt;/p&gt;
+
+&lt;p&gt;For those of you who are not accomplished web developers, test-driven design is a popular software development process where you repeat a very simple development cycle.  First, you build a test, defining what a function or piece of code should do.  Initially, that test will fail, because you haven’t written the code yet.  Next, you build out that function or code, so that when you run the test again, it should pass the test parameters.&lt;/p&gt;
+
+&lt;p&gt;It sounds like such a simple and easy concept that initially I was a little disappointed with Austin’s suggestion.  However, at the Open Hack, he spent almost three hours teaching me a language called RSpec, a testing language designed to make test-driven development simple and effective.  After the three hours were over, I had barely scratched the surface of TDD, and had a much deeper respect for it.  &lt;/p&gt;
+
+&lt;p&gt;Austin also showed me several other Ruby gems which will undoubtedly come in handy over the next 5 weeks.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FactoryGirl&lt;/strong&gt; is a gem that comes in handy during testing, and lets you create a “factory” of ruby objects, that you can easily create for use during your testing, and then delete once your tests are done.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Web-App-1" src="/blog/feed.xmlweb-app1.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the above picture you can also see the &lt;strong&gt;Faker&lt;/strong&gt; gem, which we touched upon briefly in class.  Austin showed me that Faker can create lots of different kinds of fake data for use during testing and development; names, words, paragraphs, emails, etc, which a developer really appreciates after copying and pasting “I don’t know what to write here - blah blah blah” for the millionth time to create a paragraph of text.&lt;/p&gt;
+
+&lt;p&gt;Austin also introduced me to &lt;strong&gt;Pry&lt;/strong&gt;, a gem that allows you to pause the execution of your Ruby code, go into your console, and examine the current state of your code, all of your variables, the existing of any objects, etc.  After a brief look at the github documentation, it looks like Pry actually has a lot more useful functions that I will need to dive into at some point, however, that one function has saved me a lot of time while debugging.&lt;/p&gt;
+
+&lt;p&gt;On Thursday, July 4th, I ended up going into the MakerSquare office, and redoing all of the tests I had created with Austin the night before, to cement them in my mind.  I also took a look at a &lt;a href="http://www.railscasts.com/episodes/417-foundation"&gt;RailsCasts&lt;/a&gt; video on ZURB’s Foundation, a front-end framework similar to Twitter Bootstrap.  At that point I had worked out all of the kinks in the back-end of my web app, but the front end was still bare-boned and under-developed.&lt;/p&gt;
+
+&lt;p&gt;After a couple of hours of work, fiddling around with their grid system, I came up with the following.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Web-App-2" src="/blog/feed.xmlweb-app2.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;It may just be that I have more experience with front-end design at this point, or that I have just been overloaded with Bootstrap-esque web pages, but I find Foundation to be much easier to work with.  Not once did I want to throw my laptop against the wall, which was a big development for me.&lt;/p&gt;
+
+&lt;p&gt;For those of you who are more technically inclined, you can check out my code on my github account here: &lt;a href="https://github.com/sdrioux/Blog-App"&gt;GITHUB&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To check out the front end of my app, you can try checking it out on Heroku, at silas-blog-app.herokuapp.com.  I say try because currently Heroku is being stubborn and will not display my app.  Fingers crossed it will be up and running soon.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>So tired</title>
+    <link rel="alternate" href="/blog/2013/06/13/so-tired/"/>
+    <id>/blog/2013/06/13/so-tired/</id>
+    <published>2013-06-13T05:00:00Z</published>
+    <updated>2013-06-13T05:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <summary type="html">&lt;p&gt;Day four is done and I’m writing this with my head on the desk.  It’s not that I’m not used to working long days.  The past four days haven’t even been overly stressful or difficult.  I think the problem is that when I’m at MakerSquare, my brain never...&lt;/p&gt;</summary>
+    <content type="html">&lt;p&gt;Day four is done and I’m writing this with my head on the desk.  It’s not that I’m not used to working long days.  The past four days haven’t even been overly stressful or difficult.  I think the problem is that when I’m at MakerSquare, my brain never has a chance to go on autopilot.  Normally, everyone has those moments in the day where your higher functions sort of “check out”, and you coast along for a little while to let your brain blow off steam.  I’ve noticed that even when I’m not at my computer my mind is running through everything I’ve learned, and I can’t seem to turn it off.  I suppose in some ways that’s a good thing, but I think I need to make an effort this weekend to do some activity that isn’t coding, re-factoring my existing code, reading blogs about coding, etc. &lt;/p&gt;
+
+&lt;p&gt;With all that being said, I’ve learned a ton in the past 4 days.  Most, if not all of the Ruby work has been review for me.  I spent a ton of time prior to the start of the course learning Ruby on my own, so none of the terms or concepts have been anything I haven’t seen before.  Still, while the concepts and terms are familiar, I noticed today that I am starting to write Ruby much faster than I used to be able to, to the point where I rarely have to stop and think about what I’m doing.&lt;/p&gt;
+
+&lt;p&gt;What’s been surprising to me is how much I’ve liked learning the front end of things.  I came into the course expecting to gravitate towards the back end of web development, especially with my background writing SQL code. I had done some pre-work on HTML and CSS and wrote them off as a little boring and beneath me.  However, Harsh showed us some example websites from experienced developers and designers and I was blown away by how amazing they looked.&lt;/p&gt;
+
+&lt;p&gt;That being said, writing CSS is incredibly difficult.  The thing about SQL and Ruby is, when I look at my code I can have a pretty good idea in my head of what I’m going to get back on the screen.  This is not the case in CSS.  I spent hours today with my head buried in the “Inspect Element” screen of Google Chrome, trying to figure out why the tabs I created this morning wouldn’t line up correctly.  I fixed it by adding another class to my div tag, but I’m sure that will end up biting me in the ass tomorrow. A problem that I’ve noticed with HTML and CSS is, the more elements, tags, classes, ids, etc. that I add to my code, the more problems seem to develop.  &lt;/p&gt;
+
+&lt;p&gt;Apparently, this is a common problem among developers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="SoTired" src="/blog/feed.xmlso-tired1.png" /&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title/>
+    <link rel="alternate" href="/blog/2013/05/26/foobar/"/>
+    <id>/blog/2013/05/26/foobar/</id>
+    <published>2013-05-26T05:00:00Z</published>
+    <updated>2013-05-26T05:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <summary type="html">&lt;hr&gt;&lt;p&gt;title: Foobar
+date: 2013-06-13
+tags: 
+- Rails&lt;/p&gt;
+
+&lt;h2&gt;- MakerSquare&lt;/h2&gt;
+
+&lt;p&gt;Why are programmers obsessed with using the terms foo and bar in their code?  I’m trying to get a head start on learning Ruby for the course, but if I see another example in a book or online...&lt;/p&gt;</summary>
+    <content type="html">&lt;hr&gt;
+
+&lt;p&gt;title: Foobar
+date: 2013-06-13
+tags: 
+- Rails&lt;/p&gt;
+
+&lt;h2&gt;- MakerSquare&lt;/h2&gt;
+
+&lt;p&gt;Why are programmers obsessed with using the terms foo and bar in their code?  I’m trying to get a head start on learning Ruby for the course, but if I see another example in a book or online tutorial where the author is so incredibly un-creative that they can’t even think of two descriptive words to use as variables in their code, I’m going to destroy something.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Foobar" src="/blog/feed.xmlfoobar.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Harsh, Shehzan, Shaan, et al, you have been warned…&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Hire Meeeee</title>
+    <link rel="alternate" href="/blog/2013/05/25/hireme/"/>
+    <id>/blog/2013/05/25/hireme/</id>
+    <published>2013-05-25T05:00:00Z</published>
+    <updated>2013-05-25T05:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <summary type="html">&lt;p&gt;To any prospective employers reading this blog, I don’t care what salary you offer me, as long as I can ride a scooter in your office.&lt;/p&gt;
+</summary>
+    <content type="html">&lt;p&gt;To any prospective employers reading this blog, I don’t care what salary you offer me, as long as I can ride a scooter in your office.&lt;/p&gt;
+</content>
+  </entry>
 </feed>
