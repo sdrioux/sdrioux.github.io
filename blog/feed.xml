@@ -129,7 +129,7 @@
 </content>
   </entry>
   <entry>
-    <title/>
+    <title>Foobar</title>
     <link rel="alternate" href="/blog/2013/05/26/foobar/"/>
     <id>/blog/2013/05/26/foobar/</id>
     <published>2013-05-26T05:00:00Z</published>
@@ -137,24 +137,8 @@
     <author>
       <name>Article Author</name>
     </author>
-    <summary type="html">&lt;hr&gt;&lt;p&gt;title: Foobar
-date: 2013-06-13
-tags: 
-- Rails&lt;/p&gt;
-
-&lt;h2&gt;- MakerSquare&lt;/h2&gt;
-
-&lt;p&gt;Why are programmers obsessed with using the terms foo and bar in their code?  I’m trying to get a head start on learning Ruby for the course, but if I see another example in a book or online...&lt;/p&gt;</summary>
-    <content type="html">&lt;hr&gt;
-
-&lt;p&gt;title: Foobar
-date: 2013-06-13
-tags: 
-- Rails&lt;/p&gt;
-
-&lt;h2&gt;- MakerSquare&lt;/h2&gt;
-
-&lt;p&gt;Why are programmers obsessed with using the terms foo and bar in their code?  I’m trying to get a head start on learning Ruby for the course, but if I see another example in a book or online tutorial where the author is so incredibly un-creative that they can’t even think of two descriptive words to use as variables in their code, I’m going to destroy something.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Why are programmers obsessed with using the terms foo and bar in their code?  I’m trying to get a head start on learning Ruby for the course, but if I see another example in a book or online tutorial where the author is so incredibly un-creative that...&lt;/p&gt;</summary>
+    <content type="html">&lt;p&gt;Why are programmers obsessed with using the terms foo and bar in their code?  I’m trying to get a head start on learning Ruby for the course, but if I see another example in a book or online tutorial where the author is so incredibly un-creative that they can’t even think of two descriptive words to use as variables in their code, I’m going to destroy something.&lt;/p&gt;
 
 &lt;p&gt;&lt;img alt="Foobar" src="/blog/feed.xmlfoobar.png" /&gt;&lt;/p&gt;
 
