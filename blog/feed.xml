@@ -5,33 +5,21 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2012-01-01T06:00:00Z</updated>
+  <updated>2013-07-26T05:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
-    <title>Lorem Ipsum</title>
-    <link rel="alternate" href="/blog/2012/01/01/example-article.html"/>
-    <id>/blog/2012/01/01/example-article.html</id>
-    <published>2012-01-01T06:00:00Z</published>
-    <updated>2012-01-01T06:00:00Z</updated>
+    <title>Readit</title>
+    <link rel="alternate" href="/blog/2013/07/26/readit.html"/>
+    <id>/blog/2013/07/26/readit.html</id>
+    <published>2013-07-26T05:00:00Z</published>
+    <updated>2013-07-26T05:00:00Z</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <summary type="html">&lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget lorem quis eros dictum dictum a vitae purus. Quisque non elit sit amet turpis ullamcorper blandit. 
-Suspendisse vitae turpis et enim feugiat ullamcorper at non turpis. Vestibulum posuere, eros eget vulputate faucibus, metus massa congue velit, non pulvinar tortor risus 
-ut enim. Pellentesque lectus ligula, vehicula luctus volutpat in, convallis quis ante. Proin non odio eu orci feugiat feugiat. Mauris molestie nisi non venenatis molestie. 
-Pellentesque facilisis eros ut ultrices ultrices.
-</summary>
-    <content type="html">&lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget lorem quis eros dictum dictum a vitae purus. Quisque non elit sit amet turpis ullamcorper blandit. 
-Suspendisse vitae turpis et enim feugiat ullamcorper at non turpis. Vestibulum posuere, eros eget vulputate faucibus, metus massa congue velit, non pulvinar tortor risus 
-ut enim. Pellentesque lectus ligula, vehicula luctus volutpat in, convallis quis ante. Proin non odio eu orci feugiat feugiat. Mauris molestie nisi non venenatis molestie. 
-Pellentesque facilisis eros ut ultrices ultrices.
-&lt;/p&gt;
+    <summary type="html">&lt;p&gt;These past couple of weeks, in the limited free time that I have while doing this course, I have been building a reddit clone.  Way back in the beginning of the course, when we were learning about the basics of rails routes, we created a barebones blog app, which the class called Readit.</summary>
+    <content type="html">&lt;p&gt;These past couple of weeks, in the limited free time that I have while doing this course, I have been building a reddit clone.  Way back in the beginning of the course, when we were learning about the basics of rails routes, we created a barebones blog app, which the class called Readit.&lt;/p&gt;
 &lt;pre class="highlight ruby"&gt;&lt;span class="k"&gt;class &lt;/span&gt;&lt;span class="nc"&gt;Hello&lt;/span&gt;
   &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;
     &lt;span class="s2"&gt;&amp;quot;I am a code segment!&amp;quot;&lt;/span&gt;
