@@ -66,8 +66,8 @@
   </entry>
   <entry>
     <title>My First Fully Functional Web App</title>
-    <link rel="alternate" href="/blog/2013/07/06/my-first-fully-functional-web-app/"/>
-    <id>/blog/2013/07/06/my-first-fully-functional-web-app/</id>
+    <link rel="alternate" href="/blog/2013/07/06/myfirstfullyfunctionalwebapp/"/>
+    <id>/blog/2013/07/06/myfirstfullyfunctionalwebapp/</id>
     <published>2013-07-06T05:00:00Z</published>
     <updated>2013-07-06T05:00:00Z</updated>
     <author>
@@ -107,8 +107,8 @@
   </entry>
   <entry>
     <title>So tired</title>
-    <link rel="alternate" href="/blog/2013/06/13/so-tired/"/>
-    <id>/blog/2013/06/13/so-tired/</id>
+    <link rel="alternate" href="/blog/2013/06/13/sotired/"/>
+    <id>/blog/2013/06/13/sotired/</id>
     <published>2013-06-13T05:00:00Z</published>
     <updated>2013-06-13T05:00:00Z</updated>
     <author>
@@ -146,6 +146,33 @@
 </content>
   </entry>
   <entry>
+    <title>Two Weeks and Counting</title>
+    <link rel="alternate" href="/blog/2013/05/25/twoweeks/"/>
+    <id>/blog/2013/05/25/twoweeks/</id>
+    <published>2013-05-25T05:00:00Z</published>
+    <updated>2013-05-25T05:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <summary type="html">&lt;p&gt;In just over two weeks I will be on the path to a new career in web development, as one of 24 individuals selected to be in the first cohort of MakerSquare students.&lt;/p&gt;
+
+&lt;p&gt;A few months ago, I had a conversation with Jack Zhou, my roommate, and current Dev...&lt;/p&gt;</summary>
+    <content type="html">&lt;p&gt;In just over two weeks I will be on the path to a new career in web development, as one of 24 individuals selected to be in the first cohort of MakerSquare students.&lt;/p&gt;
+
+&lt;p&gt;A few months ago, I had a conversation with Jack Zhou, my roommate, and current Dev BootCamp student.  At the time, he had just applied to the program, and was excitedly telling me about how great his career in web development was going to be; how tech companies everywhere were clamoring to get as many devs as they could get their hands on, and treating them like royalty to keep them happy.  He told me that  Dev BootCamp could teach him enough about web development in 9 weeks to get an entry level dev job at one of these companies.  I’m sure I responded with something encouraging, but inside I was thinking, “What a rip-off.”  At the time, I couldn’t understand how you could take a subject as broad as web development, and condense it down into a 9 week course, stuffing enough knowledge inside a student’s head for a company to actually take their job application seriously.  &lt;/p&gt;
+
+&lt;p&gt;Flash forward to today, and not only have two of my roommates left Austin to pursue their own careers in web development, but now I find myself on the same path, albeit with MakerSquare, a fledgling web development bootcamp based in Austin, and cut along the same lines as devBootCamp.  The course will be 10 weeks instead of 9, clearly in order to ensure that I emerge one tenth of a better developer than Jack (kidding), however in all other aspects the goals of the course remain the same.  With any luck, 10 weeks from my start date of June 10th, I will be fending off numerous job offers from Austin employers, with a head full of code.&lt;/p&gt;
+
+&lt;p&gt;It took me awhile to go from dismissing the program as a sinkhole to throw money into, all the way to the next step in my personal development.  While I won’t go into everything that went into my journey from point A to point B, I will invite you to read &lt;a href="http://www.wired.com/wiredenterprise/2013/01/lawyer-turned-coder/"&gt;this Wired article&lt;/a&gt; that helped steer me in the right direction.&lt;/p&gt;
+
+&lt;p&gt;If all goes according to plan, I will be updating this blog regularly with my educational observations, amusing anecdotes, and coding frustrations along the way.  Either that, or this blog will descend into a bunch of memes and apologies for not posting more often.&lt;/p&gt;
+
+&lt;p&gt;We’ll see.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://cdn.tutsplus.com/net.tutsplus.com/authors/jeffreyway/1248951765_kitten-mittens.gif"&gt;Cat&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>Hire Meeeee</title>
     <link rel="alternate" href="/blog/2013/05/25/hireme/"/>
     <id>/blog/2013/05/25/hireme/</id>
@@ -154,9 +181,13 @@
     <author>
       <name>Article Author</name>
     </author>
-    <summary type="html">&lt;p&gt;To any prospective employers reading this blog, I don’t care what salary you offer me, as long as I can ride a scooter in your office.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;a href="http://www.youtube.com/watch?feature=player_embedded&amp;amp;v=STRPsW6IY8k"&gt;HireMe&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To any prospective employers reading this blog, I don’t care what salary you offer me, as long as I can ride a scooter in your office.&lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;To any prospective employers reading this blog, I don’t care what salary you offer me, as long as I can ride a scooter in your office.&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a href="http://www.youtube.com/watch?feature=player_embedded&amp;amp;v=STRPsW6IY8k"&gt;HireMe&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To any prospective employers reading this blog, I don’t care what salary you offer me, as long as I can ride a scooter in your office.&lt;/p&gt;
 </content>
   </entry>
 </feed>
