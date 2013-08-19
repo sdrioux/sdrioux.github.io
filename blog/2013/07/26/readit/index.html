@@ -1,0 +1,256 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="copyright" content="" />
+    <link type="text/plain" rel="author" href="/humans.txt" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Silas Rioux | Readit</title>
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    
+
+    
+
+    <script src="/javascripts/modernizr.js" type="text/javascript"></script>
+
+    
+  </head>
+  <body class="blog blog_2013 blog_2013_07 blog_2013_07_26 blog_2013_07_26_readit blog_2013_07_26_readit_index">
+    
+    <div id="root">  
+      <!-- Logo & Top Nav -->
+      <nav class="top-bar">
+        <ul class="title-area">
+          <!-- Title Area -->
+          <li class="name">
+            <h1><a href="/">Silas Rioux</a></h1>
+          </li>
+          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+        <section class="top-bar-section">
+        <!-- Left Nav Section -->
+        <ul class="right">
+          
+                  <li>
+          <a href='http://facebook.com/silas.rioux5'>
+            <span class='hide-for-small'><i class='icon-facebook'></i>
+            </span><span class='show-for-small'>Facebook</span>
+          </a>
+        </li>
+
+                  <li>
+          <a href='http://twitter.com/silasrioux'>
+            <span class='hide-for-small'><i class='icon-twitter'></i>
+            </span><span class='show-for-small'>Twitter</span>
+          </a>
+        </li>
+
+                  <li>
+          <a href='http://linkedin.com/in/silasrioux'>
+            <span class='hide-for-small'><i class='icon-linkedin'></i>
+            </span><span class='show-for-small'>LinkedIn</span>
+          </a>
+        </li>
+
+              
+                  <li>
+          <a href='http://github.com/sdrioux'>
+            <span class='hide-for-small'><i class='icon-github'></i>
+            </span><span class='show-for-small'>Github</span>
+          </a>
+        </li>
+
+          <li class="divider"></li>
+          <li class="portfolio"><a href="/portfolio.html">Portfolio</a></li>
+          <li class="divider"></li>
+          
+            <li class="resume"><a href="/resume.pdf">Résumé</a></li>
+            <li class="divider"></li>
+          
+          <li class="blog"><a href="/blog">Blog</a></li>
+        </ul>
+      </nav>
+      <!-- End Header and Nav -->
+
+      <!-- Main page container -->
+
+      <div class="main">
+        <div class="content">
+            <div class="row">
+  <article class="small-12 large-9 columns left">
+    <h3>
+      
+        Readit
+      
+    </h3>
+
+    
+      <p>These past couple of weeks, in the limited free time that I have while doing this course, I have been building a reddit clone.  Way back in the beginning of the course, when we were learning about the basics of rails routes, we created a barebones blog app, which the class called Readit.</p>
+
+<p>![Readit1]:(/blog/2013/07/26/readit/readit1.png)</p>
+
+<p>The class discarded the app once it had served its purpose, however, I was curious to see how closely I could get it to look and function like reddit, with links, comments, users, and a voting system.</p>
+
+<p>When we created the initial app, we were also introduced to Devise, an engine that handles user authentication, allowing users to register for the app, maintaining the user’s session, and then log in and log out securely.  Devise also uses BCrypt to encrypt and store the users passwords.</p>
+
+<p>As an engine, Devise comes with a number of pre-made views for user registration and log-in.  By default, these views live in the gem and are not editable.  The first thing that I did was to import the devise views into my app using <strong>rails generate devise:views</strong>.</p>
+
+<p>This allowed me to use bootstrap to improve the look of the log-in and registration forms.</p>
+
+<p>We had also been introduced to <strong>will_paginate</strong>, a gem that makes paginating through Active Record queries quick and easy.  While extremely helpful, the gem does not play well with Bootstrap, and I initially had some difficulty with trying to style it.   I discovered a companion gem called <em>will<em>paginate</em>bootstrap</em>*, that restyles will_paginate to work with Bootstrap.</p>
+
+<p>A key part of Reddit functionality is the ability to upvote and downvote links and comments.  Rather than try to create this myself, I found a gem called <strong>thumbs_up</strong>, which can turn Active Record models into objects that can be voted upon, and turns your users into voters, tracking their votes in a “votes” table in your database.  By linking to a “vote<em>up” or “vote</em>down” path, and passing in the object as a parameter, users can assign an upvote or downvote, which can be displayed separately or as a single number, the sum of upvotes minus the sum of downvotes.  Thumbs_up allows you the option of limiting each user to 1 vote on each object, which prevents users from spamming their own posts and comments with upvotes, and downvoting others into oblivion.  I set my index view so that the links with the highest number of votes would display first, and set the show view to do the same thing with the highest voted comments.</p>
+
+<p>One of my goals with this app was for users to submit a link to a site, and other users would be able to see a preview picture of that site, before they decided to click on the link.  This was easier said than done.  Aside from having users upload their own images of the site, my options were very limited.  However, I managed to find a service called <a href="http://webthumb.bluga.net/home">Webthumb</a>, which provides a web service API for generating web thumbnails and full-size snapshots of websites.  The API was very well documented, and even provided a Ruby wrapper, which, while being very old and no longer maintained, still provides full functionality.</p>
+
+<p>When I first implemented the API, I found that it worked great.  Provided that the user fed it a valid URL, the service would crawl to the site, and create several snapshots of varying sizes, which I could access in my views.  However, I began noticing that after a period of 24 hours, my images began disappearing from the app, being replaced by that dreaded “broken image” icon.  </p>
+
+<p>This was a problem for two reasons:</p>
+
+<p>First of all, obtaining the images was a relatively slow process.  When a user creates a post, it take the API anywhere between 1 and 2 seconds to crawl to the site and obtain an image.  This isn’t an issue if you’re only looking for one image, but if you’re on the index page and need to re-obtain all 20 thumbnails, that’s going to take a long time.  While I could theoretically use AJAX to do it asynchronously, allowing the user to continue browsing site while the images load, this would be an ugly fix.</p>
+
+<p>The second problem was that my free Webthumb account only allows me 100 credits each month.  Each call to the service costs one credit.  Once I reach 100 calls to the server, I can’t use the service until the start of the next month.</p>
+
+<p>I am still working on a fix to this problem.  My thought is that I should be able to use the service, and then write the images that it creates to an Amazon S3 server.  The images and the links they’re associated with could be stored there permanently.  After the images have been written to the S3 server, I should be able to access them directly, without needing to use the API.  Hopefully I will have some free time this weekend to test out this method.  </p>
+
+<p>For now, this is my front-page, complete with broken-linked images to Google.</p>
+
+<p>Each link is tied to the user who added it, and displays their personal gravatar image if they have one, as well as the local time they added the link.  My eventual goal is to turn the username into a link to the user’s profile page, displaying their email, github account, twitter, etc.</p>
+
+<p>Ideally I will have this completed by the end of next week.  My goal is to use this app within MakerSquare, to allow students to share coding blogs and other sites that they find useful throughout the course.  Since this first cohort is almost done with our training, it probably won’t have much use for them, but hopefully later cohorts will find it helpful.</p>
+
+    
+
+    
+
+    
+      <ul class="read_next">
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+      </ul>
+
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = "silasrioux";
+        (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+  </article>
+  <aside class="small-12 large-3 columns right">
+    <ul class="credit">
+      <li class="time">Posted on <time datetime="2013-07-26">Friday Jul 26, 2013</time></li>
+    </ul>
+    <ul class="tags">
+      
+        <li><a class="tiny button secondary round" href="/blog/tags/rails/">Rails</a></li>
+      
+        <li><a class="tiny button secondary round" href="/blog/tags/makersquare/">MakerSquare</a></li>
+      
+    </ul>
+  </aside>
+</div>
+
+
+
+        </div>
+      </div>
+      <div id="root_footer"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="row" id="footer">
+      <div class="content">
+        <p>Built with <i class="icon-heart"></i> in Austin, TX by <a href="http://github.com/sdrioux">Silas Rioux</a></p>
+      </div>
+    </footer>
+
+    <!--[if lt IE 9]>
+    <div id="ie-warning-overlay">
+      <div id="ie-warning">
+        <h1>Did you know that your copy of Internet Explorer is terribly out of date?</h1>
+        <p>
+          To get the best possible experience using our website, we recommend that you upgrade to the latest version or use another web browser. 
+          Any of the following will provide a superior experience, not only on this site, but across the web.
+        </p>
+        <p>Just click one of the icons below to get to the download page.</p>
+        <ul>
+          <li>
+            <a href="http://microsoft.com/ie">
+              <img alt="Download Internet Explorer" width="100" height="100" src="/images/browser_ie.gif" />
+              <p>Internet Explorer 9+</p>
+            </a>
+          </li>
+          <li>
+            <a href="http://mozilla.org/firefox">
+              <img alt="Download Firefox" width="100" height="100" src="/images/browser_firefox.gif" />
+              <p>Firefox</p>
+            </a>
+          </li>
+          <li>
+            <a href="http://google.com/chrome">
+              <img alt="Download Chrome" width="100" height="100" src="/images/browser_chrome.gif" />
+              <p>Google Chrome</p>
+            </a>
+          </li>
+          <li>
+            <a href="http://apple.com/safari">
+              <img alt="Download Safari" width="100" height="100" src="/images/browser_safari.gif" />
+              <p>Safari</p>
+            </a>
+          </li>
+          <li>
+            <a href="http://opera.com">
+              <img alt="Download Opera" width="100" height="100" src="/images/browser_opera.gif" />
+              <p>Opera</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <![endif]-->
+
+    <script>
+      document.write('<script src=' +
+        ('__proto__' in {} ? "/javascripts/zepto.js" : "/javascripts/jquery.js") +
+        '><\/script>')
+    </script>
+
+    <!-- Javascript -->
+    <script src="/javascripts/application.js" type="text/javascript"></script>
+    
+
+    <script>
+      $(document).ready(function () {
+        
+        $(document).foundation();
+      });
+
+      // TODO: Set your Google Analytics code here
+      var _gaq=[['_setAccount','UA-111111111-11'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+
+  </body>
+</html>
+
