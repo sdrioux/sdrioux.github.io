@@ -102,7 +102,7 @@
     
       <p>These past couple of weeks, in the limited free time that I have while doing this course, I have been building a reddit clone.  Way back in the beginning of the course, when we were learning about the basics of rails routes, we created a barebones blog app, which the class called Readit.</p>
 
-<p>![Readit1]:(/blog/2013/07/26/readit/readit1.png)</p>
+<p><img alt="Readit1" src="/blog/2013/07/26/readit/readit1.png" /></p>
 
 <p>The class discarded the app once it had served its purpose, however, I was curious to see how closely I could get it to look and function like reddit, with links, comments, users, and a voting system.</p>
 
@@ -112,13 +112,21 @@
 
 <p>This allowed me to use bootstrap to improve the look of the log-in and registration forms.</p>
 
+<p><img alt="Readit2" src="/blog/2013/07/26/readit/readit2.png" /></p>
+
 <p>We had also been introduced to <strong>will_paginate</strong>, a gem that makes paginating through Active Record queries quick and easy.  While extremely helpful, the gem does not play well with Bootstrap, and I initially had some difficulty with trying to style it.   I discovered a companion gem called <em>will<em>paginate</em>bootstrap</em>*, that restyles will_paginate to work with Bootstrap.</p>
 
+<p><img alt="Readit3" src="/blog/2013/07/26/readit/readit3.png" /></p>
+
 <p>A key part of Reddit functionality is the ability to upvote and downvote links and comments.  Rather than try to create this myself, I found a gem called <strong>thumbs_up</strong>, which can turn Active Record models into objects that can be voted upon, and turns your users into voters, tracking their votes in a “votes” table in your database.  By linking to a “vote<em>up” or “vote</em>down” path, and passing in the object as a parameter, users can assign an upvote or downvote, which can be displayed separately or as a single number, the sum of upvotes minus the sum of downvotes.  Thumbs_up allows you the option of limiting each user to 1 vote on each object, which prevents users from spamming their own posts and comments with upvotes, and downvoting others into oblivion.  I set my index view so that the links with the highest number of votes would display first, and set the show view to do the same thing with the highest voted comments.</p>
+
+<p><img alt="Readit4" src="/blog/2013/07/26/readit/readit4.png" /></p>
 
 <p>One of my goals with this app was for users to submit a link to a site, and other users would be able to see a preview picture of that site, before they decided to click on the link.  This was easier said than done.  Aside from having users upload their own images of the site, my options were very limited.  However, I managed to find a service called <a href="http://webthumb.bluga.net/home">Webthumb</a>, which provides a web service API for generating web thumbnails and full-size snapshots of websites.  The API was very well documented, and even provided a Ruby wrapper, which, while being very old and no longer maintained, still provides full functionality.</p>
 
 <p>When I first implemented the API, I found that it worked great.  Provided that the user fed it a valid URL, the service would crawl to the site, and create several snapshots of varying sizes, which I could access in my views.  However, I began noticing that after a period of 24 hours, my images began disappearing from the app, being replaced by that dreaded “broken image” icon.  </p>
+
+<p><img alt="Readit5" src="/blog/2013/07/26/readit/readit5.png" /></p>
 
 <p>This was a problem for two reasons:</p>
 
@@ -129,6 +137,8 @@
 <p>I am still working on a fix to this problem.  My thought is that I should be able to use the service, and then write the images that it creates to an Amazon S3 server.  The images and the links they’re associated with could be stored there permanently.  After the images have been written to the S3 server, I should be able to access them directly, without needing to use the API.  Hopefully I will have some free time this weekend to test out this method.  </p>
 
 <p>For now, this is my front-page, complete with broken-linked images to Google.</p>
+
+<p><img alt="Readit6" src="/blog/2013/07/26/readit/readit6.png" /></p>
 
 <p>Each link is tied to the user who added it, and displays their personal gravatar image if they have one, as well as the local time they added the link.  My eventual goal is to turn the username into a link to the user’s profile page, displaying their email, github account, twitter, etc.</p>
 
