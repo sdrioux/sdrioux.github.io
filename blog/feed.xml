@@ -5,10 +5,30 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-07-26T05:00:00Z</updated>
+  <updated>2013-08-17T05:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>NoobNoos</title>
+    <link rel="alternate" href="/blog/2013/08/17/noobnoos/"/>
+    <id>/blog/2013/08/17/noobnoos/</id>
+    <published>2013-08-17T05:00:00Z</published>
+    <updated>2013-08-17T05:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <summary type="html">Well, it’s been awhile since I’ve posted last, but I wanted to write a post regarding what I’ve accomplished with Readit since my last post.  If you check it out via [this link](http://n00bn00s.herokuapp.com), the first thing you’ll probably notice...</summary>
+    <content type="html">Well, it’s been awhile since I’ve posted last, but I wanted to write a post regarding what I’ve accomplished with Readit since my last post.  If you check it out via [this link](http://n00bn00s.herokuapp.com), the first thing you’ll probably notice is that it has a new name.  Since I wanted to use the app as a repository of coding knowledge for entry level developers, the original name didn’t really make much sense.  Harsh came up with NoobNoos, and since that was 10 times better than any of my suggestions, I went with it.
+I’ve made a lot of improvements to the site since I last wrote.  The biggest improvement is that I figured out how to take the thumbnails that my Webthumb API was generating, and store them in an Amazon S3 database.  This way, after a user has created a link, I no longer need to use one of my 100 available API calls to show the thumbnail, I can just access it directly from my S3 server.  Obtaining the images the first time is still a relatively slow process, but aside from paying Heroku for a background worker, my options are limited.
+I added “favoriting” functionality.  A user can click on the star next to each link, and add the link to his favorites, accessible on the top nav bar.  Adding and removing favorites is done using AJAX, so that the entire page doesn’t have to reload each time.
+I also added tags to each link.  Whenever a user creates a link, they can select one or multiple associated tags.  The tagcloud is a fixed side nav next to the list of links on the front page.  Any tag in the cloud can be clicked in order to bring up all links with those tags.
+One of the coolest pieces of functionality that I’ve added recently is a Websolr search bar.  Thanks to Nick Zadrozny at Websolr, who came in and taught a class on websearch technology, I was able to use a free test account on my site to work with Heroku.  The site indexes the titles of each link and will return the links that match the search.
+Finally, I tweaked the site to make it a much better user experience.  The comments are created and inserted onto the page using AJAX in order to speed up load times.  The images on the show page are much larger and provide a better view of the link’s homepage.  Users can now edit and delete their existing links.  While I can and will certainly continue to add new features and improve upon existing ones, I can now say that the site is fully functional and “finished”.
+NoobNoos: [http://n00bn00s.herokuapp.com](http://n00bn00s.herokuapp.com)
+Source: [http://github.com/sdrioux/noobnoos.git](http://github.com/sdrioux/noobnoos.git)
+</content>
+  </entry>
   <entry>
     <title>Readit</title>
     <link rel="alternate" href="/blog/2013/07/26/readit/"/>
@@ -161,33 +181,6 @@
 &lt;p&gt;&lt;img alt="Foobar" src="/blog/feed.xmlfoobar.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Harsh, Shehzan, Shaan, et al, you have been warned…&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Two Weeks and Counting</title>
-    <link rel="alternate" href="/blog/2013/05/25/twoweeks/"/>
-    <id>/blog/2013/05/25/twoweeks/</id>
-    <published>2013-05-25T05:00:00Z</published>
-    <updated>2013-05-25T05:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <summary type="html">&lt;p&gt;In just over two weeks I will be on the path to a new career in web development, as one of 24 individuals selected to be in the first cohort of MakerSquare students.&lt;/p&gt;
-
-&lt;p&gt;A few months ago, I had a conversation with Jack Zhou, my roommate, and current Dev...&lt;/p&gt;</summary>
-    <content type="html">&lt;p&gt;In just over two weeks I will be on the path to a new career in web development, as one of 24 individuals selected to be in the first cohort of MakerSquare students.&lt;/p&gt;
-
-&lt;p&gt;A few months ago, I had a conversation with Jack Zhou, my roommate, and current Dev BootCamp student.  At the time, he had just applied to the program, and was excitedly telling me about how great his career in web development was going to be; how tech companies everywhere were clamoring to get as many devs as they could get their hands on, and treating them like royalty to keep them happy.  He told me that  Dev BootCamp could teach him enough about web development in 9 weeks to get an entry level dev job at one of these companies.  I’m sure I responded with something encouraging, but inside I was thinking, “What a rip-off.”  At the time, I couldn’t understand how you could take a subject as broad as web development, and condense it down into a 9 week course, stuffing enough knowledge inside a student’s head for a company to actually take their job application seriously.  &lt;/p&gt;
-
-&lt;p&gt;Flash forward to today, and not only have two of my roommates left Austin to pursue their own careers in web development, but now I find myself on the same path, albeit with MakerSquare, a fledgling web development bootcamp based in Austin, and cut along the same lines as devBootCamp.  The course will be 10 weeks instead of 9, clearly in order to ensure that I emerge one tenth of a better developer than Jack (kidding), however in all other aspects the goals of the course remain the same.  With any luck, 10 weeks from my start date of June 10th, I will be fending off numerous job offers from Austin employers, with a head full of code.&lt;/p&gt;
-
-&lt;p&gt;It took me awhile to go from dismissing the program as a sinkhole to throw money into, all the way to the next step in my personal development.  While I won’t go into everything that went into my journey from point A to point B, I will invite you to read &lt;a href="http://www.wired.com/wiredenterprise/2013/01/lawyer-turned-coder/"&gt;this Wired article&lt;/a&gt; that helped steer me in the right direction.&lt;/p&gt;
-
-&lt;p&gt;If all goes according to plan, I will be updating this blog regularly with my educational observations, amusing anecdotes, and coding frustrations along the way.  Either that, or this blog will descend into a bunch of memes and apologies for not posting more often.&lt;/p&gt;
-
-&lt;p&gt;We’ll see.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://cdn.tutsplus.com/net.tutsplus.com/authors/jeffreyway/1248951765_kitten-mittens.gif"&gt;Cat&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
