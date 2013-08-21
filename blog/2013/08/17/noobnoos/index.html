@@ -97,14 +97,21 @@
     </h3>
 
     
-      Well, it’s been awhile since I’ve posted last, but I wanted to write a post regarding what I’ve accomplished with Readit since my last post.  If you check it out via [this link](http://n00bn00s.herokuapp.com), the first thing you’ll probably notice is that it has a new name.  Since I wanted to use the app as a repository of coding knowledge for entry level developers, the original name didn’t really make much sense.  Harsh came up with NoobNoos, and since that was 10 times better than any of my suggestions, I went with it.
-I’ve made a lot of improvements to the site since I last wrote.  The biggest improvement is that I figured out how to take the thumbnails that my Webthumb API was generating, and store them in an Amazon S3 database.  This way, after a user has created a link, I no longer need to use one of my 100 available API calls to show the thumbnail, I can just access it directly from my S3 server.  Obtaining the images the first time is still a relatively slow process, but aside from paying Heroku for a background worker, my options are limited.
-I added “favoriting” functionality.  A user can click on the star next to each link, and add the link to his favorites, accessible on the top nav bar.  Adding and removing favorites is done using AJAX, so that the entire page doesn’t have to reload each time.
-I also added tags to each link.  Whenever a user creates a link, they can select one or multiple associated tags.  The tagcloud is a fixed side nav next to the list of links on the front page.  Any tag in the cloud can be clicked in order to bring up all links with those tags.
-One of the coolest pieces of functionality that I’ve added recently is a Websolr search bar.  Thanks to Nick Zadrozny at Websolr, who came in and taught a class on websearch technology, I was able to use a free test account on my site to work with Heroku.  The site indexes the titles of each link and will return the links that match the search.
-Finally, I tweaked the site to make it a much better user experience.  The comments are created and inserted onto the page using AJAX in order to speed up load times.  The images on the show page are much larger and provide a better view of the link’s homepage.  Users can now edit and delete their existing links.  While I can and will certainly continue to add new features and improve upon existing ones, I can now say that the site is fully functional and “finished”.
-NoobNoos: [http://n00bn00s.herokuapp.com](http://n00bn00s.herokuapp.com)
-Source: [http://github.com/sdrioux/noobnoos.git](http://github.com/sdrioux/noobnoos.git)
+      <p>Well, it’s been awhile since I’ve posted last, but I wanted to write a post regarding what I’ve accomplished with Readit since my last post.  If you check it out via <a href="http://n00bn00s.herokuapp.com">this link</a>, the first thing you’ll probably notice is that it has a new name.  Since I wanted to use the app as a repository of coding knowledge for entry level developers, the original name didn’t really make much sense.  Harsh came up with NoobNoos, and since that was 10 times better than any of my suggestions, I went with it.</p>
+
+<p>I’ve made a lot of improvements to the site since I last wrote.  The biggest improvement is that I figured out how to take the thumbnails that my Webthumb API was generating, and store them in an Amazon S3 database.  This way, after a user has created a link, I no longer need to use one of my 100 available API calls to show the thumbnail, I can just access it directly from my S3 server.  Obtaining the images the first time is still a relatively slow process, but aside from paying Heroku for a background worker, my options are limited.</p>
+
+<p>I added “favoriting” functionality.  A user can click on the star next to each link, and add the link to his favorites, accessible on the top nav bar.  Adding and removing favorites is done using AJAX, so that the entire page doesn’t have to reload each time.  </p>
+
+<p>I also added tags to each link.  Whenever a user creates a link, they can select one or multiple associated tags.  The tagcloud is a fixed side nav next to the list of links on the front page.  Any tag in the cloud can be clicked in order to bring up all links with those tags.</p>
+
+<p>One of the coolest pieces of functionality that I’ve added recently is a Websolr search bar.  Thanks to Nick Zadrozny at Websolr, who came in and taught a class on websearch technology, I was able to use a free test account on my site to work with Heroku.  The site indexes the titles of each link and will return the links that match the search.</p>
+
+<p>Finally, I tweaked the site to make it a much better user experience.  The comments are created and inserted onto the page using AJAX in order to speed up load times.  The images on the show page are much larger and provide a better view of the link’s homepage.  Users can now edit and delete their existing links.  While I can and will certainly continue to add new features and improve upon existing ones, I can now say that the site is fully functional and “finished”.  </p>
+
+<p>NoobNoos: <a href="http://n00bn00s.herokuapp.com">http://n00bn00s.herokuapp.com</a></p>
+
+<p>Source: <a href="http://github.com/sdrioux/noobnoos.git">http://github.com/sdrioux/noobnoos.git</a></p>
 
     
 
